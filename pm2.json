@@ -1,0 +1,14 @@
+{
+  "apps": [
+      {
+          "name": "whatsapp_orionbot",
+          "script": "uvicorn",
+          "args": "chatbot.api:app --host 0.0.0.0 --port 3051",
+          "interpreter": "python3",
+          "env": {
+              "ENVIRONMENT": "prod",
+              "PORT": 3051
+          }
+      }
+  ]
+}
