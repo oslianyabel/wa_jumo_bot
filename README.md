@@ -1,4 +1,4 @@
-## WhatsApp Chatbot with FastAPI, Twilio, OpenAI and Odoo
+## WhatsApp Chatbot with FastAPI, WhatsApp API, OpenAI and Odoo
 
 - **Packages:**
 
@@ -23,10 +23,6 @@
 - get catalogo
 - get products by category id
 - get all categories
-
-## Diagram
-
-![App Screenshot](https://back.jumotech.com/uploads/Whatsapp_Chatbot_012565b233.png)
 
 ## Endpoint
 

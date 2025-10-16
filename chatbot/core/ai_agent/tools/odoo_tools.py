@@ -7,21 +7,6 @@ from chatbot.core.ai_agent.tools.odoo_manager import odoo_orion
 from chatbot.logging_conf import logger
 
 
-async def get_catalogo(user_number, twilio_number, background_tasks) -> str:
-    logger.debug("Enviando catálogo...")
-    if twilio_number:
-        canva_link = "https://www.canva.com/design/DAGTFiQWG0o/D2h1urQ6FKr20YU7034hlg/view?utm_content=DAGTFiQWG0o&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h745d3380ca"
-
-        asyncio.create_task(
-            notifications.send_whatsapp_message(
-                body=f"Aqui tiene nuestro catálogo de productos: {canva_link}",
-                to=twilio_number,
-            )
-        )
-
-    return "Catálogo enviado al chat. Si le interesa algún producto anote su sku y realice su pedido"
-
-
 async def create_sale_order_by_product_id(
     user_number, product_id, product_qty, email, background_tasks, twilio_number=None
 ) -> str:
@@ -362,7 +347,6 @@ odoo_tools = {
     "get_product_by_sku": get_product_by_sku,
     "get_product_by_name": get_product_by_name,
     "get_all_products": get_all_products,
-    "get_catalogo": get_catalogo,
     "get_products_by_category_id": get_products_by_category_id,
     "get_all_categories": get_all_categories,
     "send_main_product_image": send_main_product_image,

@@ -1,7 +1,7 @@
+import asyncio
 import time
 from contextlib import asynccontextmanager
 from datetime import datetime
-import asyncio
 
 import sentry_sdk
 from asgi_correlation_id import CorrelationIdMiddleware
@@ -13,7 +13,6 @@ from chatbot.config import config
 from chatbot.core import notifications
 from chatbot.core.ai_agent.completions import Agent
 from chatbot.core.ai_agent.enumerations import MessageType
-from chatbot.core.ai_agent.prompt import WELCOME_MSG
 from chatbot.core.ai_agent.tools.odoo_manager import odoo_orion
 from chatbot.core.database import db
 from chatbot.logging_conf import logger
@@ -273,13 +272,6 @@ async def handle_new_user_setup(
         bool: True if setup successful, False if error occurred
     """
     logger.info(f"Primera interacción de {user_number}")
-
-    # Send welcome message
-    background_tasks.add_task(
-        notifications.send_whatsapp_message,
-        f"{WELCOME_MSG}\n Mediante este enlace puede acceder a nuestro catálogo de productos: {config.CANVA_LINK}",
-        user_number,
-    )
 
     try:
         partner = await odoo_orion.get_partner_by_phone(format_number)

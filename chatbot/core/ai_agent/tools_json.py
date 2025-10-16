@@ -46,7 +46,7 @@ create_lead = {
 get_partner = {
     "type": "function",
     "name": "get_partner",
-    "description": "Consulta informacion de un usuario. Esta acción verifica si el usuario es cliente de Akivoy y de ser así retorna su información personal. Activación automática al detectar frases como '¿Sabes quién soy?'.",
+    "description": "Consulta informacion de un usuario. Esta acción verifica si el usuario es cliente de JUMO y de ser así retorna su información personal. Activación automática al detectar frases como '¿Sabes quién soy?'.",
 }
 
 create_partner = {
@@ -129,12 +129,6 @@ get_all_products = {
     "description": "Consulta todos los productos disponibles",
 }
 
-get_catalogo = {
-    "type": "function",
-    "name": "get_catalogo",
-    "description": "Envía el catálogo de productos de Orion Akivoy por WhatsApp al cliente",
-}
-
 get_products_by_category_id = {
     "type": "function",
     "name": "get_products_by_category_id",
@@ -193,7 +187,6 @@ odoo_tools_json = [
     get_product_by_sku,
     get_product_by_name,
     get_all_products,
-    get_catalogo,
     get_products_by_category_id,
     get_all_categories,
     send_main_product_image,
