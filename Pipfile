@@ -1,0 +1,32 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+cloudinary = "*"
+python-dotenv = "*"
+sqlalchemy = "*"
+psycopg2-binary = "*"
+rich = "*"
+asgi-correlation-id = "*"
+python-json-logger = "*"
+openai = "*"
+python-jose = "*"
+python-multipart = "*"
+pydantic-settings = "*"
+aiohttp = "*"
+aiosmtplib = "*"
+aiofiles = "*"
+b2sdk = "*"
+fastapi = {extras = ["standard"], version = "*"}
+uvicorn = {extras = ["standard"], version = "*"}
+databases = {extras = ["asyncpg"], version = "*"}
+passlib = {extras = ["bcrypt"], version = "*"}
+pydantic = {extras = ["email"], version = "*"}
+sentry-sdk = {extras = ["fastapi"], version = "*"}
+
+[dev-packages]
+
+[requires]
+python_version = "3.12"

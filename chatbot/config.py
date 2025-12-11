@@ -25,8 +25,6 @@ class GlobalConfig(BaseConfig):
 
     # OpenAI
     OPENAI_API_KEY: str
-    ORION_ASSISTANT_ID: str
-    EXTRACTOR_ASSISTANT_ID: str
 
     # Meta WhatsApp Business API
     WHATSAPP_ACCESS_TOKEN: str
