@@ -4,7 +4,7 @@
           "name": "whatsapp_jumo",
           "script": "uvicorn",
           "args": "chatbot.api:app --host 0.0.0.0 --port 3044",
-          "interpreter": "python3",
+          "interpreter": "/home/ubuntu/wa_jumo_bot/.venv/bin/python3",
           "env": {
               "ENVIRONMENT": "prod",
               "PORT": 3044
