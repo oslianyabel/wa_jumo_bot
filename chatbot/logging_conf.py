@@ -66,7 +66,7 @@ def configure_logging() -> None:
                     "handlers": ["default", "rotating_file"],
                     "level": "WARNING",
                 },
-                "app": {
+                "chatbot": {
                     "handlers": ["default", "rotating_file"],
                     "level": "DEBUG" if config.ENV_STATE == "dev" else "INFO",
                     "propagate": False,
@@ -77,4 +77,4 @@ def configure_logging() -> None:
 
 
 configure_logging()
-logger = logging.getLogger("app")
+logger = logging.getLogger("chatbot")

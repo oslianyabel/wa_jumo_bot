@@ -23,10 +23,10 @@ from chatbot.utils import check_time, create_dirs, format_phone_number
 async def lifespan(app: FastAPI):
     await db.connect()
     sentry_sdk.init(
-        dsn="https://bedf347e74e8ec53eaafe53f809c167a@o4509520742449152.ingest.us.sentry.io/4509588276183040",
+        dsn="https://47097d446f3bdacccabfd24ff6c590d0@o4509520742449152.ingest.us.sentry.io/4510539371249664",
+        # Add data like request headers and IP for users,
+        # see https://docs.sentry.io/platforms/python/data-management/data-collected/ for more info
         send_default_pii=True,
-        traces_sample_rate=1.0,
-        profiles_sample_rate=1.0,
     )
     # Start background cleanup task
     global _cleanup_task
@@ -75,6 +75,11 @@ class HealthCheckResponse(BaseModel):
     status: str
     timestamp: str
     service: str
+
+
+@app.get("/sentry-debug")
+async def trigger_error():
+    division_by_zero = 1 / 0
 
 
 @app.get("/health", response_model=HealthCheckResponse)

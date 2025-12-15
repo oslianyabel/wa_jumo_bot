@@ -30,6 +30,7 @@ class GlobalConfig(BaseConfig):
     WHATSAPP_ACCESS_TOKEN: str
     WHATSAPP_PHONE_NUMBER_ID: str
     WHATSAPP_VERIFY_TOKEN: str
+    WHATSAPP_BOT_NUMBER: str
 
     # Smtp
     EMAIL: str
@@ -48,7 +49,6 @@ class GlobalConfig(BaseConfig):
     CLOUDINARY_API_SECRET: str
 
     # Others
-    BOT_NUMBER: str
     WORDS_LIMIT: Optional[int] = None
     CANVA_LINK: str
 
