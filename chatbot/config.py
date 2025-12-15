@@ -52,6 +52,9 @@ class GlobalConfig(BaseConfig):
     WORDS_LIMIT: Optional[int] = None
     CANVA_LINK: str
 
+    # Sentry
+    SENTRY_DSN: str
+
 
 class DevConfig(GlobalConfig):
     model_config = SettingsConfigDict(env_prefix="DEV_")
@@ -74,4 +77,4 @@ config = get_config(BaseConfig().ENV_STATE)  # type: ignore
 
 
 if __name__ == "__main__":
-    print(config)
+    print(config.SENTRY_DSN)

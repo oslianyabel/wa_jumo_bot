@@ -23,7 +23,7 @@ from chatbot.utils import check_time, create_dirs, format_phone_number
 async def lifespan(app: FastAPI):
     await db.connect()
     sentry_sdk.init(
-        dsn="https://996344e711958a7d985cc119e0a92bb0@o4510539445239808.ingest.us.sentry.io/4510539449565184",
+        dsn=config.SENTRY_DSN,
         send_default_pii=True,
         traces_sample_rate=1.0,
         profiles_sample_rate=1.0,

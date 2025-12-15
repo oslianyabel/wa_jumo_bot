@@ -1,13 +1,15 @@
+import asyncio
 import os
 import smtplib
- 
-import asyncio
-import aiohttp
+import sys
 from email.message import EmailMessage
-from typing import Optional, Dict, Any
+from pathlib import Path
+from typing import Optional
 
+import aiohttp
 import aiosmtplib
 
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 from chatbot.config import config
 from chatbot.logging_conf import logger
 
@@ -179,11 +181,9 @@ async def send_whatsapp_message_with_retry(body, to, media=None):
                 logger.warning(f"Retrying in {delay * 1000}ms...")
                 await asyncio.sleep(delay)
             else:
-                logger.error(
-                    f"Error enviando mensaje de WhatsApp a {to}. Error: {exc}"
-                )
+                logger.error(f"Error enviando mensaje de WhatsApp a {to}. Error: {exc}")
                 return False
-    
+
     return False
 
 
@@ -308,3 +308,11 @@ def send_email_sync(email_to, subject, body, pdf_path=None):
     except Exception as exc:
         logger.error(f"Error enviando correo a {email_to}: {exc}")
         return False
+
+
+if __name__ == "__main__":
+    import asyncio
+
+    TEST_NUMBER = "+1 (835) 235-3226"
+
+    asyncio.run(send_whatsapp_message(body="Hello World", to=TEST_NUMBER))
