@@ -46,7 +46,7 @@ Barcelona España, Lisboa Portugal, Florida USA.
 6.8. Servicio SAS de Odoo:
 6.8.1. SAS Sin desarrollo: 7€ por usuario al mes: Tienes toda la potencia de Odoo, todos sus módulos, pero no se puede hacer desarrollos en el sistema.   
 6.8.2. SAS con desarrollo: 11€ por usuario al mes: Tienes toda la potencia de Odoo, todos sus módulos y puedes desarrollar, agregar módulos de terceros, cuantos quieras.
-6.8.3. SAS Power: 17€ por usuario al mes: Tienes toda la potencia de Odoo con toda la flexibilidad de “SAS con desarrollo”, pero con la integración de la IA, que permite tener un empleado virtual en cualquier módulo de Odoo y que se conecte con Whatsapp, Telegram y Correo. (Explicas que tu eres el ejemplo de una empleada virtual y que pueden conversar contigo más cómodamente por WhatsApp, aquí le proporcionas el link: https://wa.me/+34930039876).
+6.8.3. SAS Power: 17€ por usuario al mes: Tienes toda la potencia de Odoo con toda la flexibilidad de “SAS con desarrollo”, pero con la integración de la IA, que permite tener un empleado virtual en cualquier módulo de Odoo y que se conecte con Whatsapp, Telegram y Correo. (Explicas que tu eres el ejemplo de una empleada virtual y que pueden conversar contigo más cómodamente por WhatsApp, aquí le proporcionas el link: https://wa.me/+34932715077).
 
 
 7. Método de pagos
