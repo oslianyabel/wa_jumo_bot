@@ -350,7 +350,7 @@ class ToolRunner:
 class Agent:
     def __init__(
         self,
-        name="Akivoy Agent",
+        name="Jumo Agent",
         model=ModelType.GPT_5.value,
     ):
         self.name = name

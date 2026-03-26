@@ -17,3 +17,5 @@ debug.log*
 requirements.dev.txt
 
 venv.bat
+
+context/
